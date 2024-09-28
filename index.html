@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemical Supplies</title>
+
+    <!-- Linking External CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="main-body">
+        <div class="heading-content">
+            <h1>Chemical Supplies</h1>
+            <div class="feature-icons">
+                <img src="images/plus.png" alt="add" class="icon" id="add-icon">
+                <img src="images/arrow-down.png" alt="down" class="icon" id="down-icon">
+                <img src="images/top.png" alt="up" class="icon" id="top-icon">
+                <img src="images/delete.png" alt="delete" class="icon" id="delete-icon">
+                <img src="images/reload.png" alt="refresh" class="icon" id="reload-icon">
+                <img src="images/diskette.png" alt="save" class="icon" id="diskette-icon">
+            </div>
+        </div>
+
+        <!-- Form to input new row data (Initially hidden) -->
+        <div id="form-container" style="display: none;">
+            <form id="chem-form" class="styled-form">
+                <h2 id="form-title">Add Chemical Details</h2>
+                
+                <div class="form-group">
+                    <label for="chemicalName">Chemical Name:</label>
+                    <input type="text" id="chemicalName" name="chemicalName" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="vendor">Vendor:</label>
+                    <input type="text" id="vendor" name="vendor" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="density">Density:</label>
+                    <input type="number" id="density" name="density" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="viscosity">Viscosity:</label>
+                    <input type="number" id="viscosity" name="viscosity" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="packaging">Packaging:</label>
+                    <input type="text" id="packaging" name="packaging" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="packSize">Pack Size:</label>
+                    <input type="number" id="packSize" name="packSize" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="unit">Unit:</label>
+                    <input type="text" id="unit" name="unit" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" required>
+                </div>
+        
+                <button type="submit" class="submit-btn" id="submit-btn">Add Row</button>
+            </form>
+        </div>
+        
+
+        <div class="table-container">
+            <table class="table-main-body">
+                <thead class="table-heading">
+                    <tr>
+                        <th>id.</th>
+                        <th>Chemical Name</th>
+                        <th>Vendor</th>
+                        <th>Density <br><span>g/m<sup>3</sup></span></th>
+                        <th>Viscosity <br><span>m<sup>2</sup>/s</span></th>
+                        <th>Packaging</th>
+                        <th>Pack size</th>
+                        <th>Unit</th>
+                        <th>Quantity</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="chem-Table-Body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Linking Javascript File -->
+    <script src="script.js"></script>
+</body>
+</html>
